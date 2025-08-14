@@ -11,7 +11,7 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # --- NLTK Setup ---
-nltk_resources = ['punkt', 'stopwords', 'wordnet']
+nltk_resources = ['punkt', 'punkt_tab', 'stopwords', 'wordnet']
 for resource in nltk_resources:
     try:
         nltk.data.find(f'tokenizers/{resource}' if resource == 'punkt' else f'corpora/{resource}')
@@ -372,3 +372,4 @@ if 'prediction' in st.session_state:
             hide_index=True,
             use_container_width=True
         )
+
